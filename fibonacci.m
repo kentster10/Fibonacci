@@ -20,8 +20,10 @@ classdef fibonacci < handle
             obj.answer_num = fibonacci.user_input;
             if isnan(str2double(obj.answer_num))
                 display('input must be an integer, please try again')
+                return
             elseif str2double(obj.answer_num) < 3
                 display('input value must be greater than or equal to 3')
+                return
             else
                 for i = 1:str2double(obj.answer_num)
                     if i>2
